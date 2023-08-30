@@ -1,0 +1,93 @@
+
+import java.awt.EventQueue;
+import java.awt.Font;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+
+import javax.swing.ButtonGroup;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JRadioButton;
+import javax.swing.JTextField;
+import javax.swing.border.TitledBorder;
+
+import java.awt.Color;
+public class Turnos {
+	private final ButtonGroup A=new ButtonGroup();
+	private JFrame f;
+	protected Object Olague;
+	public static void main(String[] args) {
+		// DanielHernandezOlague
+		EventQueue.invokeLater(new Runnable(){
+			public void run(){
+				try {
+					Turnos window = new Turnos();
+					window.f.setVisible(true);
+					
+				} catch (Exception e){
+					e.printStackTrace();
+	              }
+	          }
+		});
+   }
+	public Turnos (){
+		initialize();
+		initialize();
+	}
+	private void initialize(){
+		f=new JFrame();
+		f.setTitle("Turnos");
+		f.setBounds(500,100,500,400);
+		
+		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		f.getContentPane().setLayout(null);
+		f.getContentPane().setBackground(Color.red);
+		
+
+		JPanel Pa = new JPanel();
+		Pa.setForeground(Color.BLUE);
+		Pa.setBorder(new TitledBorder(null, "Turno", TitledBorder.CENTER, TitledBorder.TOP, new Font("Tahoma", Font.PLAIN, 20), Color.RED));
+		Pa.setBackground(Color.YELLOW);
+		Pa.setBounds(50, 50, 180, 110);
+		f.getContentPane().add(Pa);
+		Pa.setLayout(null);
+		
+
+		final JRadioButton BotonA = new JRadioButton("Matutino");
+		BotonA.setOpaque(false);
+		BotonA.setBounds(10, 30, 80, 23);
+		BotonA.setOpaque(false);
+		A.add(BotonA);
+		Pa.add(BotonA);
+		
+		final JRadioButton BotonA1 = new JRadioButton("Vespertino");
+		BotonA1.setOpaque(false);
+		BotonA1.setBounds(10, 60, 100, 23);
+		BotonA1.setOpaque(false);
+		A.add(BotonA1);
+		Pa.add(BotonA1);
+		
+		final JTextField t_sexo = new JTextField();
+		t_sexo.setForeground(Color.BLUE);
+		t_sexo.setFont(new Font("Arial", Font.PLAIN, 20));
+		t_sexo.setBackground(Color.CYAN);
+		t_sexo.setBounds(180, 180, 180, 27);
+		f.getContentPane().add(t_sexo);
+		
+		JButton b_movedor = new JButton ("Calcular");
+		b_movedor.setBounds(50,230,180,50);
+		b_movedor.addMouseListener(new MouseAdapter()
+		{
+			@Override
+			public void mouseClicked(MouseEvent arg0)
+				{
+	
+				}
+				
+					
+			});
+
+		f.getContentPane().add(b_movedor);
+	}
+}

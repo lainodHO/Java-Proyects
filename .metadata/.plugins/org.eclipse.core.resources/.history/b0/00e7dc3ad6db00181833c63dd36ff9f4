@@ -1,0 +1,52 @@
+
+import java.awt.EventQueue;
+import java.awt.Font;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.TitledBorder;
+
+import java.awt.Color;
+public class Turnos {
+	private JFrame miFormulario;
+	protected Object Olague;
+	public static void main(String[] args) {
+		// DanielHernandezOlague
+		EventQueue.invokeLater(new Runnable(){
+			public void run(){
+				try {
+					Turnos window = new Turnos();
+					window.miFormulario.setVisible(true);
+					
+				} catch (Exception e){
+					e.printStackTrace();
+	              }
+	          }
+		});
+   }
+	public Turnos (){
+		initialize();
+		initialize();
+	}
+	private void initialize(){
+		miFormulario=new JFrame();
+		miFormulario.setTitle("Mi primer hijo");
+		miFormulario.setBounds(500,100,500,400);
+		
+		miFormulario.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		miFormulario.getContentPane().setLayout(null);
+		miFormulario.getContentPane().setBackground(Color.red);
+		
+
+		JPanel sexo = new JPanel();
+		sexo.setForeground(Color.BLUE);
+		sexo.setBorder(new TitledBorder(null, "Etapa", TitledBorder.CENTER, TitledBorder.TOP, new Font("Tahoma", Font.PLAIN, 20), Color.RED));
+		sexo.setBackground(Color.YELLOW);
+		sexo.setBounds(65, 50, 200, 110);
+		miFormulario.getContentPane().add(sexo);
+		sexo.setLayout(null);
+		
+
+	
+	}
+}

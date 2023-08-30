@@ -1,0 +1,14 @@
+
+public class Ingrese {
+
+	public static void main(String[] args) {
+		// DanielHernandezOlague
+		int a;
+		while (a!=0){
+			System.out.println("ingrese un numero(0 para salir)");
+			a=input.nextInt();
+		}
+
+	}
+
+}
